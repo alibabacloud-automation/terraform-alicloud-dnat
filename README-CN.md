@@ -1,36 +1,34 @@
-Terraform Module for creating several DNAT entries for Nat Gateway on  Alibaba Cloud.    
 terraform-alicloud-dnat
-===========================
+=======================
 
-English | [简体中文](https://github.com/terraform-alicloud-modules/terraform-alicloud-dnat/blob/master/README-CN.md)
+本 Module 用于在阿里云的 Nat 网关下批量添加[Dnat条目](https://www.alibabacloud.com/help/doc-detail/65170.htm)。
+DNAT功能将NAT网关上的公网IP映射给ECS实例使用，使ECS实例能够提供互联网服务。
 
-Terraform module used to create several [DNAT entries](https://www.alibabacloud.com/help/doc-detail/65170.htm) for an existing Nat Gateway on Alibaba Cloud. 
-The DNAT function which maps a public IP address to an ECS instance so that the ECS instance can provide Internet services.
-
-These types of resources are supported:
+本 Module 支持创建以下资源:
 
 * [dnat_entry](https://www.terraform.io/docs/providers/alicloud/r/forward_entry.html)
 
-## Terraform versions
+## Terraform 版本
 
-For Terraform 0.12 and Alicloud Provider 1.56.0+.
+如果您正在使用 Terraform 0.12，Provider的版本 1.56.0+。
 
-## Usage
+## 用法
 
+支持设置待创建的资源
 ```hcl
-// Create vpc and vswitches
+// 创建vpc和vswitch
 module "vpc" {
   source = "alibaba/vpc/alicloud"
   region = var.region
   # ... omitted
 }
-// Create ecs instance
+// 创建 ecs instance
 module "ecs-instance" {
   source = "alibaba/ecs-instance/alicloud"
   region = var.region
   # ... omitted
 }
-// create a new nat gateway
+// 创建一个 nat gateway
 module "nat" {
   source = "terraform-alicloud-modules/nat-gateway/alicloud"
   region = var.region
@@ -67,25 +65,23 @@ module "complete" {
 }
 ```
 
-## Examples
+## 示例
 
-* [Complete example](https://github.com/terraform-alicloud-modules/terraform-alicloud-dnat/tree/master/examples/complete) shows all available parameters to configure dnat entry.
+* [完整使用示例](https://github.com/terraform-alicloud-modules/terraform-alicloud-dnat/tree/master/examples/complete) 展示所有可配置的参数。
 
-Submit Issues
--------------
+提交问题
+-------
+如果在使用该 Terraform Module 的过程中有任何问题，可以直接创建一个 [Provider Issue](https://github.com/terraform-providers/terraform-provider-alicloud/issues/new)，我们将根据问题描述提供解决方案。
 
-If you have any problems when using this module, please opening a [provider issue](https://github.com/terraform-providers/terraform-provider-alicloud/issues/new) and let us know.
+**注意:** 不建议在该 Module 仓库中直接提交 Issue。
 
-**Note:** There does not recommend to open an issue on this repo.
-
-Authors
+作者
 -------
 Created and maintained by He Guimin(@xiaozhu36 heguimin36@163.com)
 
-Reference
+参考
 ---------
 * [Terraform-Provider-Alicloud Github](https://github.com/terraform-providers/terraform-provider-alicloud)
 * [Terraform-Provider-Alicloud Release](https://releases.hashicorp.com/terraform-provider-alicloud/)
 * [Terraform-Provider-Alicloud Docs](https://www.terraform.io/docs/providers/alicloud/index.html)
-
 
