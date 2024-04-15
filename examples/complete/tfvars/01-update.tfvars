@@ -1,5 +1,5 @@
 #variables for ecs
-system_disk_size = 60
+# system_disk_size = 60
 
 #variables for nat gateway
 specification = "Middle"
