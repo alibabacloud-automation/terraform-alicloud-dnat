@@ -1,4 +1,10 @@
-## 1.2.0 (Unreleased)
+## 1.3.0 (Unreleased)
+## 1.2.0 (November 04, 2024)
+
+- Module: add outputs.tf; example/complete: improve the examples [GH-6](https://github.com/alibabacloud-automation/terraform-alicloud-dnat/pull/6)
+- examples/complete: improve the examples [GH-5](https://github.com/alibabacloud-automation/terraform-alicloud-dnat/pull/5)
+- Improves the module examples/complete [GH-4](https://github.com/alibabacloud-automation/terraform-alicloud-dnat/pull/4)
+
 ## 1.1.0 (December 10, 2021)
 
 ENHANCEMENTS:
