@@ -129,12 +129,47 @@ and then run `terraform init` and `terraform apply` to make the defined provider
 
 More details see [How to use provider in the module](https://www.terraform.io/docs/language/modules/develop/providers.html#passing-providers-explicitly)
 
-## Terraform versions
+<!-- BEGIN_TF_DOCS -->
+## Requirements
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
-| <a name="requirement_alicloud"></a> [alicloud](#requirement\_alicloud) | >= 1.56.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [alicloud_forward_entry.this](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/forward_entry) | resource |
+| [alicloud_nat_gateways.this](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/data-sources/nat_gateways) | data source |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_create"></a> [create](#input\_create) | Whether to create dnat entries. If true, the 'entries' should be set. | `bool` | `true` | no |
+| <a name="input_dnat_table_id"></a> [dnat\_table\_id](#input\_dnat\_table\_id) | The dnat table id to use on all dnat entries. | `string` | `""` | no |
+| <a name="input_entries"></a> [entries](#input\_entries) | A list of entries to create. Each item valid keys: 'name'(default to a string with prefix 'tf-dnat-entry' and numerical suffix), 'ip\_protocol'(default to 'any'), 'external\_ip'(if not, use root parameter 'external\_ip'), 'external\_port'(default to 'any'), 'internal\_ip'(required), 'internal\_port'(default to the 'external\_port'). | `list(map(string))` | `[]` | no |
+| <a name="input_external_ip"></a> [external\_ip](#input\_external\_ip) | The public ip address to use on all dnat entries. | `string` | `""` | no |
+| <a name="input_internal_ip"></a> [internal\_ip](#input\_internal\_ip) | The internal ip, must a private ip. | `string` | `""` | no |
+| <a name="input_nat_gateway_id"></a> [nat\_gateway\_id](#input\_nat\_gateway\_id) | The id of a nat gateway used to fetch the 'dnat\_table\_id'. | `string` | `""` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_this_forward_entry_id"></a> [this\_forward\_entry\_id](#output\_this\_forward\_entry\_id) | The ID of the forward entrys |
+<!-- END_TF_DOCS -->
 
 Submit Issues
 -------------
