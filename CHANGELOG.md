@@ -1,3 +1,5 @@
+## [1.2.2](https://github.com/alibabacloud-automation/terraform-alicloud-dnat/compare/v1.2.1...v1.2.2) (2025-11-27)
+
 ## 1.2.1 (March 14, 2025)
 
 - examples/complete: improve the examples [GH-7](https://github.com/alibabacloud-automation/terraform-alicloud-dnat/pull/7)
