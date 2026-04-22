@@ -37,7 +37,7 @@ module "security_group" {
 
 module "ecs-instance" {
   source  = "alibaba/ecs-instance/alicloud"
-  version = "3.0.0"
+  version = "4.0.0"
 
   number_of_instances = 1
 
@@ -62,7 +62,7 @@ resource "alicloud_nat_gateway" "this" {
 
 module "eip" {
   source  = "terraform-alicloud-modules/eip/alicloud"
-  version = "3.0.0"
+  version = "3.0.1"
 
   number_of_eips       = 1
   bandwidth            = var.eip_bandwidth
