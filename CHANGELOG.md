@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/alibabacloud-automation/terraform-alicloud-dnat/compare/v2.0.0...v2.0.1) (2026-04-22)
+
+
+### Bug Fixes
+
+* update version of the dependency module ([7c1dd61](https://github.com/alibabacloud-automation/terraform-alicloud-dnat/commit/7c1dd610ca0ae9dd2a970a97118fadc94d26afec))
+
 ## [2.0.0](https://github.com/alibabacloud-automation/terraform-alicloud-dnat/compare/v1.2.2...v2.0.0) (2026-04-22)
 
 
