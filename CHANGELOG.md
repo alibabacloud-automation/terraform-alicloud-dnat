@@ -1,3 +1,14 @@
+## [2.0.0](https://github.com/alibabacloud-automation/terraform-alicloud-dnat/compare/v1.2.2...v2.0.0) (2026-04-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* add provider version constraint for aliyun/alicloud
+
+### Features
+
+* add provider version constraint for aliyun/alicloud ([a2287d7](https://github.com/alibabacloud-automation/terraform-alicloud-dnat/commit/a2287d72c199bc7941eed205783006a1bce98308))
+
 ## [1.2.2](https://github.com/alibabacloud-automation/terraform-alicloud-dnat/compare/v1.2.1...v1.2.2) (2025-11-27)
 
 ## 1.2.1 (March 14, 2025)
