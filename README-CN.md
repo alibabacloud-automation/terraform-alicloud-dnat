@@ -133,12 +133,13 @@ module "dnat" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
+| <a name="requirement_alicloud"></a> [alicloud](#requirement\_alicloud) | >= 1.200.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | >= 1.200.0 |
 
 ## Modules
 
@@ -148,8 +149,8 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_forward_entry.this](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/forward_entry) | resource |
-| [alicloud_nat_gateways.this](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/data-sources/nat_gateways) | data source |
+| [alicloud_forward_entry.this](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/forward_entry) | resource |
+| [alicloud_nat_gateways.this](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/nat_gateways) | data source |
 
 ## Inputs
 
